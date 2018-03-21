@@ -180,6 +180,10 @@ function LeakyRELUCombinationNetwork(things = [],detailsPerThing = 1,layerCounts
     for (i=0;i<inputs.length;i++) {
       var input = inputs[i];
       if (typeof input == `string`) {
+        if (!this.thingLayers[input]) {
+          this.things.push(input);
+          this.thingLayers[input] = new LeakyRELUNeuralLayer(0,detailsPerThing,0.01);
+        }
         var thingVector = this.thingLayers[input].evaluate([]);
         processedInputs = processedInputs.concat(thingVector);
       } else {

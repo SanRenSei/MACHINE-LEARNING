@@ -82,7 +82,7 @@ testNet.printThingVectors();
 /////////////////////////////////////////////////
 //Test For Curriculum Learning With Rock Paper Scissors Knife
 
-var things = [`Rock`,`Paper`,`Scissors`,`Knife`];
+var things = [];
 var testInputs = [
   [`Rock`,`Paper`],
   [`Rock`,`Scissors`],
